@@ -7,5 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../SdiVariant5.Core/SdiVariant5.Core.csproj" />
+    <ProjectReference Include="../SdiVariant5.Analytics/SdiVariant5.Analytics.csproj" />
   </ItemGroup>
 </Project>

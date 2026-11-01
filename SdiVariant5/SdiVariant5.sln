@@ -11,12 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdiVariant5.Tasks", "..\Sdi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdiVariant5.Tests", "..\SdiVariant5.Tests\SdiVariant5.Tests.csproj", "{19BB1351-B2F3-4289-9248-26CA4C752838}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdiVariant5.Analytics", "..\SdiVariant5.Analytics\SdiVariant5.Analytics.csproj", "{9187D95C-D2EC-412C-8B19-059E17E8CD8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9187D95C-D2EC-412C-8B19-059E17E8CD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9187D95C-D2EC-412C-8B19-059E17E8CD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9187D95C-D2EC-412C-8B19-059E17E8CD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9187D95C-D2EC-412C-8B19-059E17E8CD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D13197FC-3049-4C8F-9ACA-0586BC33E314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D13197FC-3049-4C8F-9ACA-0586BC33E314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D13197FC-3049-4C8F-9ACA-0586BC33E314}.Release|Any CPU.ActiveCfg = Release|Any CPU
