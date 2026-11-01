@@ -1,0 +1,14 @@
+# .NET build output
+**/bin/
+**/obj/
+TestResults/
+
+# IDE settings
+.vs/
+.idea/
+*.user
+*.suo
+
+# macOS and application bundles
+.DS_Store
+*.app/

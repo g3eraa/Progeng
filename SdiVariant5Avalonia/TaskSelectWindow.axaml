@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SdiVariant5.TaskSelectWindow"
+        Title="Выбор задачи"
+        SizeToContent="WidthAndHeight" CanResize="False"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Window.Styles>
+        <Style Selector="Border.group">
+            <Setter Property="BorderBrush" Value="#D5D8DD" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="12,8,12,10" />
+        </Style>
+        <Style Selector="TextBlock.groupHeader">
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="0,0,0,4" />
+        </Style>
+    </Window.Styles>
+
+    <StackPanel Margin="16" Spacing="12" Width="540">
+        <Border Classes="group">
+            <StackPanel>
+                <TextBlock Classes="groupHeader" Text="Решаемые задачи" />
+                <CheckBox x:Name="ZeroRowBox"
+                          Content="1. Имеется ли строка, состоящая только из нулевых элементов" />
+                <CheckBox x:Name="EvenColumnsBox"
+                          Content="2. Суммарное количество нулевых элементов в чётных столбцах" />
+            </StackPanel>
+        </Border>
+
+        <Border Classes="group">
+            <StackPanel>
+                <TextBlock Classes="groupHeader" Text="Нумерация строк и столбцов" />
+                <RadioButton x:Name="FromOneButton" GroupName="Numbering"
+                             Content="с 1 — чётные столбцы: 2, 4, 6, …" />
+                <RadioButton x:Name="FromZeroButton" GroupName="Numbering"
+                             Content="с 0 (индексы C#) — чётные столбцы: 0, 2, 4, …" />
+            </StackPanel>
+        </Border>
+
+        <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+            <Button Content="OK" MinWidth="90" HorizontalContentAlignment="Center" IsDefault="True"
+                    Click="Ok_Click" />
+            <Button Content="Отмена" MinWidth="90" HorizontalContentAlignment="Center" IsCancel="True"
+                    Click="Cancel_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

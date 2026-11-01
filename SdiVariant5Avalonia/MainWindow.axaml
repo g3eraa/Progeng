@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SdiVariant5.MainWindow"
+        Title="SDI-приложение — Вариант 5"
+        Width="720" Height="500" MinWidth="520" MinHeight="320"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Выход" Click="Exit_Click" />
+            </MenuItem>
+            <MenuItem Header="_Массив">
+                <MenuItem x:Name="EditItem" Header="_Ввод и редактирование…" Click="Edit_Click" />
+                <MenuItem x:Name="RandomItem" Header="_Заполнить случайными числами" Click="Random_Click" />
+            </MenuItem>
+            <MenuItem Header="_Задача">
+                <MenuItem x:Name="ChooseTaskItem" Header="_Выбор задачи…" Click="ChooseTask_Click" />
+                <Separator />
+                <MenuItem Header="_Решить" InputGesture="F5" Click="Solve_Click" />
+            </MenuItem>
+            <MenuItem Header="_Справка">
+                <MenuItem Header="_О программе…" InputGesture="F1" Click="About_Click" />
+            </MenuItem>
+        </Menu>
+
+        <Border DockPanel.Dock="Bottom" Background="#F3F4F6" BorderBrush="#D5D8DD" BorderThickness="0,1,0,0"
+                Padding="10,4">
+            <DockPanel>
+                <TextBlock x:Name="TasksText" DockPanel.Dock="Right" />
+                <TextBlock x:Name="SizeText" />
+            </DockPanel>
+        </Border>
+
+        <TextBlock DockPanel.Dock="Top" Margin="12,8,12,4" TextWrapping="Wrap" LineHeight="20">
+            <Run FontWeight="SemiBold" Text="Вариант 5." />
+            <Run Text="Дан двумерный массив." />
+            <LineBreak />
+            <Run Text="1) Имеется ли в исходном массиве строка, состоящая только из нулевых элементов?" />
+            <LineBreak />
+            <Run Text="2) Определить суммарное количество нулевых элементов в чётных столбцах." />
+        </TextBlock>
+
+        <Border Margin="12,4,12,12" BorderBrush="#D5D8DD" BorderThickness="1" Background="White">
+            <ScrollViewer x:Name="MatrixScroll"
+                          HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                          ToolTip.Tip="Двойной щелчок — редактировать массив"
+                          DoubleTapped="Matrix_DoubleTapped" />
+        </Border>
+    </DockPanel>
+</Window>
