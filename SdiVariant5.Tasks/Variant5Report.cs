@@ -57,12 +57,16 @@ namespace SdiVariant5
             Variant5Solver solver = new Variant5Solver(matrix);
             List<int> zeroColumns = solver.FindZeroColumns();
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Дополнительные сведения о матрице: анализ");
+            sb.AppendLine("Дополнительные сведения о матрице: анализ и статистика");
             sb.AppendLine($"Всего нулевых элементов: {solver.CountZeros()}.");
             sb.AppendLine("Нулевые столбцы: " +
                 (zeroColumns.Count == 0 ? "нет" : JoinNumbers(zeroColumns, first)) + ".");
             sb.AppendLine($"Суммы по строкам: {string.Join(", ", MatrixOperations.GetRowSums(matrix))}.");
             sb.AppendLine($"Суммы по столбцам: {string.Join(", ", MatrixOperations.GetColumnSums(matrix))}.");
+            sb.AppendLine($"Минимальный элемент: {MatrixExtrema.GetMinimum(matrix)}.");
+            sb.AppendLine($"Максимальный элемент: {MatrixExtrema.GetMaximum(matrix)}.");
+            sb.AppendLine($"Положительных элементов: {MatrixSignCounter.CountPositive(matrix)}.");
+            sb.AppendLine($"Отрицательных элементов: {MatrixSignCounter.CountNegative(matrix)}.");
             return sb.ToString();
         }
 

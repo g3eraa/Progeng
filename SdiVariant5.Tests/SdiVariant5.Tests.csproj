@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../SdiVariant5.Core/SdiVariant5.Core.csproj" />
+    <ProjectReference Include="../SdiVariant5.Analytics/SdiVariant5.Analytics.csproj" />
     <ProjectReference Include="../SdiVariant5.Tasks/SdiVariant5.Tasks.csproj" />
   </ItemGroup>
 </Project>

@@ -19,6 +19,10 @@ namespace SdiVariant5.Tests
             StringAssert.Contains(report, $"Нулевые столбцы: {zeroColumn}.");
             StringAssert.Contains(report, "Суммы по строкам: 1, -2.");
             StringAssert.Contains(report, "Суммы по столбцам: -1, 0.");
+            StringAssert.Contains(report, "Минимальный элемент: -2.");
+            StringAssert.Contains(report, "Максимальный элемент: 1.");
+            StringAssert.Contains(report, "Положительных элементов: 1.");
+            StringAssert.Contains(report, "Отрицательных элементов: 1.");
         }
 
         [TestMethod]
@@ -34,6 +38,10 @@ namespace SdiVariant5.Tests
             StringAssert.Contains(report, "Ответ: да. Номера таких строк: 1.");
             Assert.IsFalse(report.Contains("Задача 2."));
             StringAssert.Contains(report, "Дополнительные сведения о матрице");
+            StringAssert.Contains(report, "Минимальный элемент: 0.");
+            StringAssert.Contains(report, "Максимальный элемент: 0.");
+            StringAssert.Contains(report, "Положительных элементов: 0.");
+            StringAssert.Contains(report, "Отрицательных элементов: 0.");
         }
 
         [TestMethod]
