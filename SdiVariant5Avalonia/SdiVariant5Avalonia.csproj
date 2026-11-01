@@ -9,12 +9,9 @@
     <AssemblyName>SdiVariant5Avalonia</AssemblyName>
   </PropertyGroup>
 
-  <!-- Классы с логикой общие с Windows-версией (папка ../SdiVariant5), здесь они не копируются. -->
   <ItemGroup>
-    <Compile Include="..\SdiVariant5\SdiVariant5\Matrix.cs" Link="Shared\Matrix.cs" />
-    <Compile Include="..\SdiVariant5\SdiVariant5\TaskOptions.cs" Link="Shared\TaskOptions.cs" />
-    <Compile Include="..\SdiVariant5\SdiVariant5\Variant5Solver.cs" Link="Shared\Variant5Solver.cs" />
-    <Compile Include="..\SdiVariant5\SdiVariant5\Variant5Report.cs" Link="Shared\Variant5Report.cs" />
+    <ProjectReference Include="../SdiVariant5.Core/SdiVariant5.Core.csproj" />
+    <ProjectReference Include="../SdiVariant5.Tasks/SdiVariant5.Tasks.csproj" />
   </ItemGroup>
 
   <ItemGroup>

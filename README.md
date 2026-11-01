@@ -1,0 +1,31 @@
+# SDI — вариант 5
+
+Приложение на C# для работы с целочисленной матрицей: поиск нулевых строк
+и подсчёт нулей в чётных столбцах. Нумерация столбцов выбирается с нуля или единицы.
+В окне результата также выводятся нулевые столбцы, общее число нулей и суммы
+элементов по строкам и столбцам.
+
+- `SdiVariant5.Core` — библиотека .NET 8: `Matrix` и `MatrixOperations`
+  (транспонирование, суммы по строкам и столбцам).
+- `SdiVariant5.Tasks` — библиотека .NET 8: решение задач, параметры и текстовый отчёт.
+- `SdiVariant5.Tests` — автоматические тесты MSTest для обеих библиотек.
+- `SdiVariant5/SdiVariant5` — приложение Windows Forms, .NET 8.
+- `SdiVariant5Avalonia` — приложение Avalonia, .NET 10, в том числе для macOS.
+
+Оба приложения подключают библиотеки через `ProjectReference`.
+
+В Visual Studio на Windows откройте `SdiVariant5/SdiVariant5.sln`.
+Для сборки и запуска тестов нужен .NET SDK 8 или новее и среда выполнения .NET 8;
+для Avalonia нужен SDK 10.
+
+Из корня репозитория:
+
+```sh
+dotnet test SdiVariant5.Tests/SdiVariant5.Tests.csproj
+dotnet build SdiVariant5/SdiVariant5.sln -c Release
+dotnet run --project SdiVariant5Avalonia/SdiVariant5Avalonia.csproj
+```
+
+На Mac для создания самостоятельного приложения запустите
+`bash SdiVariant5Avalonia/make-mac-app.sh`.
+Windows Forms запускается только на Windows.
