@@ -57,7 +57,7 @@ namespace SdiVariant5
             Variant5Solver solver = new Variant5Solver(matrix);
             List<int> zeroColumns = solver.FindZeroColumns();
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Дополнительные сведения о матрице: статистика");
+            sb.AppendLine("Дополнительные сведения о матрице: анализ и статистика");
             sb.AppendLine($"Всего нулевых элементов: {solver.CountZeros()}.");
             sb.AppendLine("Нулевые столбцы: " +
                 (zeroColumns.Count == 0 ? "нет" : JoinNumbers(zeroColumns, first)) + ".");
