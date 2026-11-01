@@ -6,6 +6,23 @@ namespace SdiVariant5.Tests
     [TestClass]
     public class MatrixOperationsTests
     {
+        [DataTestMethod]
+        [DataRow(1, 1)]
+        [DataRow(1, 20)]
+        [DataRow(20, 1)]
+        [DataRow(20, 20)]
+        public void DoubleTransposeRestoresMatrixAtBoundaryDimensions(int rows, int columns)
+        {
+            Matrix source = new Matrix(rows, columns);
+            source.FillRandom(-100, 100, new Random(42));
+            Matrix result = MatrixOperations.Transpose(MatrixOperations.Transpose(source));
+            Assert.AreEqual(source.Rows, result.Rows);
+            Assert.AreEqual(source.Columns, result.Columns);
+            for (int i = 0; i < rows; i++)
+                for (int j = 0; j < columns; j++)
+                    Assert.AreEqual(source[i, j], result[i, j]);
+        }
+
         [TestMethod]
         public void TransposeSwapsAxesWithoutChangingSource()
         {

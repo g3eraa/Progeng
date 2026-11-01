@@ -6,6 +6,22 @@ namespace SdiVariant5.Tests
     [TestClass]
     public class Variant5SolverTests
     {
+        [DataTestMethod]
+        [DataRow(1, 1, 0, 1)]
+        [DataRow(1, 20, 10, 10)]
+        [DataRow(20, 1, 0, 20)]
+        [DataRow(20, 20, 200, 200)]
+        public void AllZeroMatrixHandlesBoundaryDimensions(
+            int rows, int columns, int fromOneCount, int fromZeroCount)
+        {
+            Variant5Solver solver = new Variant5Solver(new Matrix(rows, columns));
+            Assert.AreEqual(rows, solver.FindZeroRows().Count);
+            Assert.AreEqual(columns, solver.FindZeroColumns().Count);
+            Assert.AreEqual(rows * columns, solver.CountZeros());
+            Assert.AreEqual(fromOneCount, solver.CountZerosInEvenColumns(Numbering.FromOne));
+            Assert.AreEqual(fromZeroCount, solver.CountZerosInEvenColumns(Numbering.FromZero));
+        }
+
         private static Matrix Sample()
         {
             Matrix matrix = new Matrix(3, 4);
