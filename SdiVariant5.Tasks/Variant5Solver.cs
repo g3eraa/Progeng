@@ -118,7 +118,7 @@ namespace SdiVariant5
         /// <summary>Является ли столбец с индексом column чётным при данной нумерации.</summary>
         public static bool IsEvenColumn(int column, Numbering numbering)
         {
-            int number = numbering == Numbering.FromOne ? column + 1 : column;
+            int number = column;
             return number % 2 == 0;
         }
 
