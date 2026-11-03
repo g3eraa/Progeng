@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>SdiVariant10</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SdiVariant10.Core/SdiVariant10.Core.csproj" />
+    <ProjectReference Include="../SdiVariant10.Analytics/SdiVariant10.Analytics.csproj" />
+  </ItemGroup>
+</Project>

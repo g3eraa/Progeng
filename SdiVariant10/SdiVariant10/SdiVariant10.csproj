@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>SdiVariant10</RootNamespace>
+    <AssemblyName>SdiVariant10</AssemblyName>
+    <!-- Позволяет собирать проект и не на Windows (запускать — только на Windows). -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../SdiVariant10.Core/SdiVariant10.Core.csproj" />
+    <ProjectReference Include="../../SdiVariant10.Tasks/SdiVariant10.Tasks.csproj" />
+  </ItemGroup>
+
+</Project>
